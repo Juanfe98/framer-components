@@ -32,7 +32,7 @@ const GridItem = ({ children, align = "center", title }: GridItemProps) => {
 
   const alignmentClasses = getAlignmentClasses(align);
   return (
-    <div key={counter} className="bg-gray-95 shadow-md rounded-lg ">
+    <div key={counter} className="bg-gray-95 shadow-md rounded-xl">
       <Header title={title} handleRefresh={handleRefresh} />
       <div
         className={`flex ${alignmentClasses} justify-center items-center w-full mt-4 p-4`}
