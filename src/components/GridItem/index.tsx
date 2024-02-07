@@ -1,15 +1,20 @@
 import { useState } from "react";
-import Card from "../card-scrolling";
 import CodeBlock from "../code-block";
 import Header from "./Header";
 
 interface GridItemProps {
   title: string;
   children: React.ReactNode;
+  code: string;
   align?: "center" | "left" | "right";
 }
 
-const GridItem = ({ children, align = "center", title }: GridItemProps) => {
+const GridItem = ({
+  children,
+  align = "center",
+  title,
+  code,
+}: GridItemProps) => {
   const [counter, setCounter] = useState(0);
   const [showCode, setShowCode] = useState(false);
 
@@ -18,7 +23,7 @@ const GridItem = ({ children, align = "center", title }: GridItemProps) => {
   };
 
   const handleShowCode = () => {
-    setShowCode((code) => !code);
+    setShowCode((showCode) => !showCode);
   };
 
   const getAlignmentClasses = (align: "center" | "left" | "right") => {
@@ -34,12 +39,10 @@ const GridItem = ({ children, align = "center", title }: GridItemProps) => {
   return (
     <div key={counter} className="bg-gray-95 shadow-md rounded-xl">
       <Header title={title} handleRefresh={handleRefresh} />
-      <div
-        className={`flex ${alignmentClasses} justify-center items-center w-full mt-4 p-4`}
-      >
+      <div className={`flex ${alignmentClasses} items-center w-full mt-4 p-4`}>
         {children}
       </div>
-      {showCode && <CodeBlock code={Card.code} />}
+      {showCode && <CodeBlock code={code} />}
       <div className="flex justify-end p-4">
         <button onClick={handleShowCode}>
           <span>&lt;/ show code &gt;</span>
