@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const Header = ({ title, handleRefresh }: HeaderProps) => {
   return (
-    <div className="bg-gray-20 p-4 flex justify-between">
+    <div className="bg-gray-20 p-4 flex justify-between rounded-t-lg">
       <h2 className="text-xl text-white ">{title}</h2>
       <Tooltip text="Refresh" variant="naked">
         <button onClick={handleRefresh}>
