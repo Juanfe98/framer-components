@@ -37,6 +37,10 @@ const Accordion = ({ i, expanded, setExpanded }: any) => {
 };
 
 export const AccordionCode = `
+!IMPORTANT: As the accordion implementation is bigger than one component
+you can find the rest of components here ->
+https://github.com/Juanfe98/framer-components/tree/main/src/components/accordion-menu
+
 const Accordion = ({ i, expanded, setExpanded }: any) => {
   const isOpen = i === expanded;
 
