@@ -1,4 +1,8 @@
 import "./App.css";
+import {
+  AccordionCode,
+  Example,
+} from "./components/accordion-menu/accordion-menu";
 import ButtonScale from "./components/button-scale";
 import Card from "./components/card-scrolling";
 import Dialog from "./components/dialog";
@@ -24,7 +28,7 @@ function App() {
           <ButtonScale />
         </GridItem>
         <GridItem title="Enter item on scroll" code={Card.code}>
-          <div className="max-h-60 w-96 overflow-y-scroll overflow-x-hidden flex flex-col">
+          <div className="max-h-60 w-96 overflow-y-scroll overflow-x-hidden flex flex-col px-2">
             {items.map((item, i) => (
               <Card key={i} text={item} index={i} />
             ))}
@@ -32,6 +36,9 @@ function App() {
         </GridItem>
         <GridItem title="Dialog" code={Dialog.code}>
           <Dialog />
+        </GridItem>
+        <GridItem title="Accordion Menu" code={AccordionCode}>
+          <Example />
         </GridItem>
       </div>
     </div>

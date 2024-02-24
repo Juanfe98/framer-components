@@ -39,6 +39,7 @@ const GridItem = ({
   return (
     <div key={counter} className="bg-gray-95 shadow-md rounded-xl">
       <Header title={title} handleRefresh={handleRefresh} />
+      {/* Here i will add an optional small description of the component */}
       <div className={`flex ${alignmentClasses} items-center w-full mt-4 p-4`}>
         {children}
       </div>
