@@ -44,7 +44,7 @@ const GridItem = ({
         {children}
       </div>
       {showCode && <CodeBlock code={code} />}
-      <div className="flex justify-end p-4">
+      <div className="flex justify-end p-4 border-t border-t-gray-20">
         <button onClick={handleShowCode}>
           <span>&lt;/ show code &gt;</span>
         </button>

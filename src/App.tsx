@@ -7,6 +7,7 @@ import ButtonScale from "./components/button-scale";
 import Card from "./components/card-scrolling";
 import Dialog from "./components/dialog";
 import GridItem from "./components/GridItem";
+import { NotificationStack } from "./components/notification-stack/notification-stack";
 
 function App() {
   const items = [
@@ -39,6 +40,9 @@ function App() {
         </GridItem>
         <GridItem title="Accordion Menu" code={AccordionCode}>
           <Example />
+        </GridItem>
+        <GridItem title="Notification Stack" code={NotificationStack.code}>
+          <NotificationStack />
         </GridItem>
       </div>
     </div>
